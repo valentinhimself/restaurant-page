@@ -10,13 +10,15 @@ bckgrImg.src = './assets/background.jpg';
 window.Structure = Structure;
 window.setHomeDOM = setHomeDOM;
 
-const EventListener = (() => {
-  const listeners = document.querySelectorAll('nav>ul>li');
+const NavEventListener = (() => {
+  const listeners = document.querySelectorAll('nav>ul>li, #menu-btn');
+
   listeners.forEach((listener) =>
     listener.addEventListener('click', () => {
       Structure.resetMain();
       if (listener.textContent === 'Home') {
         setHomeDOM();
+        MenuBtnListener();
       } else if (listener.textContent === 'Menu') {
         setMenuDOM();
       } else {
@@ -24,4 +26,10 @@ const EventListener = (() => {
       }
     })
   );
+  return [listeners];
 })();
+
+function MenuBtnListener() {
+  const menuBtn = document.querySelector('#menu-btn');
+  menuBtn.addEventListener('click', () => NavEventListener[0][1].click());
+}
