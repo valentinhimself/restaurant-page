@@ -7,9 +7,6 @@ import { setContactDOM } from './contact.js';
 const bckgrImg = document.querySelector('.restaurant-front');
 bckgrImg.src = './assets/background.jpg';
 
-window.Structure = Structure;
-window.setHomeDOM = setHomeDOM;
-
 const NavEventListener = (() => {
   const listeners = document.querySelectorAll('nav>ul>li, #menu-btn');
 
@@ -33,3 +30,5 @@ function MenuBtnListener() {
   const menuBtn = document.querySelector('#menu-btn');
   menuBtn.addEventListener('click', () => NavEventListener[0][1].click());
 }
+
+window.onload = () => NavEventListener[0][0].click();
