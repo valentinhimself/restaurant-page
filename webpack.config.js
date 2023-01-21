@@ -9,14 +9,25 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js',
-    assetModuleFilename: '[name][ext]',
+    assetModuleFilename: 'assets/[name][ext]',
   },
   module: {
     rules: [
       {
-        test: /\.css$/,
-        // use: ['style-loader', 'css-loader'],
+        test: /\.(jpeg|jpg|png|svg)$/i,
         type: 'asset/resource',
+      },
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'styles/',
+            },
+          },
+        ],
       },
     ],
   },

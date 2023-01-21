@@ -10,23 +10,63 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/styles/style.css":
+/*!******************************!*\
+  !*** ./src/styles/style.css ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"styles/style.css\");\n\n//# sourceURL=webpack://restaurant-page/./src/styles/style.css?");
+
+/***/ }),
+
+/***/ "./src/contact.js":
+/*!************************!*\
+  !*** ./src/contact.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"setContactDOM\": () => (/* binding */ setContactDOM)\n/* harmony export */ });\nfunction setContactDOM() {\n  const h1 = document.createElement('h1');\n  h1.textContent = 'La Panaderia Contact';\n  const main = document.querySelector('main');\n  main.append(h1);\n}\n\n\n//# sourceURL=webpack://restaurant-page/./src/contact.js?");
+
+/***/ }),
+
+/***/ "./src/home.js":
+/*!*********************!*\
+  !*** ./src/home.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__),\n/* harmony export */   \"setHomeDOM\": () => (/* binding */ setHomeDOM)\n/* harmony export */ });\nconst Structure = (() => {\n  const main = document.querySelector('main');\n\n  const resetMain = () => {\n    const arr = main.querySelectorAll('*');\n    arr.forEach((element) => {\n      element.remove();\n    });\n  };\n  return { main, resetMain };\n})();\n\nfunction setHomeDOM() {\n  const h1 = document.createElement('h1');\n  h1.textContent = 'La Panaderia';\n  Structure.main.append(h1);\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Structure);\n\n\n//# sourceURL=webpack://restaurant-page/./src/home.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/style.css */ \"./src/styles/style.css\");\n\n\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/style.css */ \"./src/styles/style.css\");\n/* harmony import */ var _assets_background_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/background.jpg */ \"./src/assets/background.jpg\");\n/* harmony import */ var _home_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./home.js */ \"./src/home.js\");\n/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./menu.js */ \"./src/menu.js\");\n/* harmony import */ var _contact_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./contact.js */ \"./src/contact.js\");\n\n\n\n\n\n\nconst bckgrImg = document.querySelector('.restaurant-front');\nbckgrImg.src = './assets/background.jpg';\n\nwindow.Structure = _home_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"];\nwindow.setHomeDOM = _home_js__WEBPACK_IMPORTED_MODULE_2__.setHomeDOM;\n\nconst EventListener = (() => {\n  const listeners = document.querySelectorAll('nav>ul>li');\n  listeners.forEach((listener) =>\n    listener.addEventListener('click', () => {\n      _home_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"].resetMain();\n      if (listener.textContent === 'Home') {\n        (0,_home_js__WEBPACK_IMPORTED_MODULE_2__.setHomeDOM)();\n      } else if (listener.textContent === 'Menu') {\n        (0,_menu_js__WEBPACK_IMPORTED_MODULE_3__.setMenuDOM)();\n      } else {\n        (0,_contact_js__WEBPACK_IMPORTED_MODULE_4__.setContactDOM)();\n      }\n    })\n  );\n})();\n\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
 
 /***/ }),
 
-/***/ "./src/styles/style.css":
-/*!******************************!*\
-  !*** ./src/styles/style.css ***!
-  \******************************/
+/***/ "./src/menu.js":
+/*!*********************!*\
+  !*** ./src/menu.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"setMenuDOM\": () => (/* binding */ setMenuDOM)\n/* harmony export */ });\nfunction setMenuDOM() {\n  const h1 = document.createElement('h1');\n  h1.textContent = 'La Panaderia Menu';\n  const main = document.querySelector('main');\n  main.append(h1);\n}\n\n\n//# sourceURL=webpack://restaurant-page/./src/menu.js?");
+
+/***/ }),
+
+/***/ "./src/assets/background.jpg":
+/*!***********************************!*\
+  !*** ./src/assets/background.jpg ***!
+  \***********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"style.css\";\n\n//# sourceURL=webpack://restaurant-page/./src/styles/style.css?");
+eval("module.exports = __webpack_require__.p + \"assets/background.jpg\";\n\n//# sourceURL=webpack://restaurant-page/./src/assets/background.jpg?");
 
 /***/ })
 
@@ -57,6 +97,18 @@ eval("module.exports = __webpack_require__.p + \"style.css\";\n\n//# sourceURL=w
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/global */
 /******/ 	(() => {
 /******/ 		__webpack_require__.g = (function() {
@@ -67,6 +119,11 @@ eval("module.exports = __webpack_require__.p + \"style.css\";\n\n//# sourceURL=w
 /******/ 				if (typeof window === 'object') return window;
 /******/ 			}
 /******/ 		})();
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
